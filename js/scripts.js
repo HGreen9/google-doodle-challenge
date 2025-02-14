@@ -19,23 +19,41 @@ window.addEventListener('load', function() {
   var audio = document.getElementById('background-audio');
   audio.controls = false; // Hide the audio player controls
 
-  // Ensure the audio is loaded and ready before attempting to play it
-  audio.addEventListener('canplaythrough', function() {
-    setTimeout(function() {
-      audio.play().catch(function(error) {
-        console.log('Audio playback failed:', error);
-      });
-    }, 4000); // 4000 milliseconds = 4 seconds delay
-  });
+  console.log('Audio element:', audio);
 
-  // Fallback in case 'canplaythrough' event is not fired
-  setTimeout(function() {
-    if (audio.paused) {
-      audio.play().catch(function(error) {
-        console.log('Audio playback failed:', error);
-      });
-    }
-  }, 6000); // 6000 milliseconds = 6 seconds delay
+  function startAudioPlayback() {
+    // Ensure the audio is loaded and ready before attempting to play it
+    audio.addEventListener('canplaythrough', function() {
+      console.log('canplaythrough event fired');
+      setTimeout(function() {
+        audio.play().then(function() {
+          console.log('Audio playback started');
+        }).catch(function(error) {
+          console.log('Audio playback failed:', error);
+        });
+      }, 4000); // 4000 milliseconds = 4 seconds delay
+    });
+
+    // Fallback in case 'canplaythrough' event is not fired
+    setTimeout(function() {
+      if (audio.paused) {
+        console.log('Fallback: attempting to play audio');
+        audio.play().then(function() {
+          console.log('Audio playback started');
+        }).catch(function(error) {
+          console.log('Audio playback failed:', error);
+        });
+      }
+    }, 6000); // 6000 milliseconds = 6 seconds delay
+
+    // Remove the event listeners after the first interaction
+    window.removeEventListener('click', startAudioPlayback);
+    window.removeEventListener('keydown', startAudioPlayback);
+  }
+
+  // Add event listeners for user interaction
+  window.addEventListener('click', startAudioPlayback);
+  window.addEventListener('keydown', startAudioPlayback);
 });
 
 // Function to generate a random number between min and max
