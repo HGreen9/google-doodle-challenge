@@ -39,7 +39,12 @@ function animateFireFlies() {
 // Call the function to start the animation
 animateFireFlies();
 
-gsap.from(".sing", {
+gsap.from(".bird", {
   opacity: 0,
-  delay: 4.5,
+  delay: 4,
+});
+
+gsap.from(".music1, .music2, .music3", {
+  opacity: 0,
+  delay: 5,
 });
