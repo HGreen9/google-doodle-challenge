@@ -38,3 +38,8 @@ function animateFireFlies() {
 
 // Call the function to start the animation
 animateFireFlies();
+
+gsap.from(".sing", {
+  opacity: 0,
+  delay: 4.5,
+});
