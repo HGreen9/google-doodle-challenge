@@ -8,4 +8,4 @@
 
 ## Resources
 
-<!-- Figma, CodePen, Copilot, Gsap, Adobe Illustrator -->
+<!-- Figma, CodePen, Copilot, Gsap, Adobe Illustrator, Pixabay -->
