@@ -179,7 +179,7 @@
 
   /* Adjust the vine rope for smaller screens */
   #vine-rope {
-    stroke-width: 4px; /* Reduce stroke width */
+    stroke-width: 6px; /* clickable stroke width */
   }
 
   /* Center and scale the play button container */
