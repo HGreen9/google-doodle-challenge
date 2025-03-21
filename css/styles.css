@@ -146,11 +146,12 @@
     margin: 0 auto; /* Center the stage */
   }
 
-  body {
+  .scaled-container {
     transform: scale(0.5); /* Scale everything down to 50% */
     transform-origin: top left; /* Ensure scaling starts from the top-left corner */
     width: 200%; /* Prevent content from being cut off */
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative; /* Ensure proper positioning */
   }
 
   #vine-rope {
@@ -158,7 +159,11 @@
   }
 
   .play-button-container {
-    transform: scale(0.5); /* Scale down the play button container */
+    transform: scale(1); /* Keep play button container at normal scale */
+    position: absolute; /* Adjust positioning for mobile */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .play-circle, .play-triangle {
@@ -175,15 +180,21 @@
   .template-container {
     transform: scale(0.5); /* Scale down the entire template container */
     transform-origin: top left; /* Ensure scaling starts from the top-left corner */
+    position: relative; /* Ensure proper positioning */
+    margin: 0 auto; /* Center the container */
   }
 
   .template-header, .template-footer {
-    transform: scale(0.5); /* Scale down header and footer */
+    transform: scale(1); /* Keep header and footer at normal scale */
     transform-origin: top left;
+    width: 100%; /* Ensure they span the full width */
+    text-align: center; /* Center-align text */
   }
 
   .template-content {
     transform: scale(0.5); /* Scale down content */
     transform-origin: top left;
+    margin: 0 auto; /* Center the content */
+    width: 90%; /* Ensure content fits within the screen */
   }
 }
