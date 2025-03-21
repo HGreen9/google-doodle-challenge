@@ -87,3 +87,14 @@
 .stop-square:hover {
   fill: #e21a1a; /* Darker hover effect for the square */
 }
+
+#vine-rope {
+  stroke: #285711;
+  stroke-width: 6px;
+  animation: sway 4s infinite;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.5)); /* Drop shadow for the vine */
+}
+
+#Google path {
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.6)); /* Drop shadow for Google letters */
+}
