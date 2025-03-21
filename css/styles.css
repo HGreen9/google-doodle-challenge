@@ -137,3 +137,59 @@
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Adjust drop shadow for smaller screens */
   }
 }
+
+/* Enhanced responsive styles for mobile devices */
+@media (max-width: 480px) { /* Target smaller screens like phones */
+  #stage {
+    height: 150px; /* Further reduce height for smaller screens */
+    width: 90%; /* Add padding for better fit */
+    margin: 0 auto; /* Center the stage */
+  }
+
+  #vine-rope {
+    stroke-width: 3px; /* Further reduce stroke width */
+    animation: sway 2.5s infinite; /* Slightly faster animation for smaller screens */
+  }
+
+  .play-button-container {
+    position: absolute;
+    top: 40%; /* Adjust positioning for smaller screens */
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .play-circle, .play-triangle {
+    width: 40px; /* Scale down play button size */
+    height: 40px;
+    cursor: pointer;
+    transition: fill 0.2s ease;
+  }
+
+  .play-triangle:hover, .stop-square:hover {
+    fill: #c11a1a; /* Slightly lighter hover effect for smaller screens */
+  }
+
+  #Google path {
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4)); /* Subtle drop shadow for smaller screens */
+  }
+
+  /* Mock search bar adjustments */
+  .mock-search-bar {
+    width: 80%; /* Make the search bar responsive */
+    height: 30px; /* Adjust height */
+    margin: 10px auto; /* Center the search bar */
+    border-radius: 15px; /* Add rounded corners */
+    background-color: #f1f1f1; /* Neutral background color */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+
+  .mock-search-bar input {
+    width: 90%; /* Adjust input width */
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
+    outline: none;
+    background: transparent;
+  }
+}
