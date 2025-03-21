@@ -141,15 +141,13 @@
 /* Enhanced responsive styles for mobile devices */
 @media (max-width: 480px) { /* Target smaller screens like phones */
   #stage {
-    height: 150px; /* Further reduce height for smaller screens */
-    width: 90%; /* Add padding for better fit */
+    height: auto; /* Allow height to adjust automatically */
+    width: 100%; /* Make the stage width responsive */
     margin: 0 auto; /* Center the stage */
   }
 
   .scaled-container {
-    transform: scale(0.5); /* Scale everything down to 50% */
-    transform-origin: top left; /* Ensure scaling starts from the top-left corner */
-    width: 200%; /* Prevent content from being cut off */
+    width: 100%; /* Ensure the container fits the screen */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     position: relative; /* Ensure proper positioning */
   }
@@ -180,6 +178,7 @@
     font-size: 0.8em; /* Reduce button font size */
     padding: 0.4em 0.8em; /* Adjust button padding */
     margin: 1em auto; /* Center buttons */
+    display: block; /* Ensure buttons are block-level for proper alignment */
   }
 
   input {
@@ -187,26 +186,29 @@
     padding: 0.8em; /* Adjust padding for smaller size */
     margin: 1em auto; /* Center the input field */
     font-size: 0.9em; /* Reduce font size */
+    display: block; /* Ensure input is block-level */
   }
 
   .template-container {
-    transform: scale(0.5); /* Scale down the entire template container */
-    transform-origin: top left; /* Ensure scaling starts from the top-left corner */
-    position: relative; /* Ensure proper positioning */
+    width: 100%; /* Ensure the container fits the screen */
     margin: 0 auto; /* Center the container */
+    position: relative; /* Ensure proper positioning */
   }
 
   .template-header, .template-footer {
-    transform: scale(1); /* Keep header and footer at normal scale */
-    transform-origin: top left;
     width: 100%; /* Ensure they span the full width */
     text-align: center; /* Center-align text */
   }
 
   .template-content {
-    transform: scale(0.5); /* Scale down content */
-    transform-origin: top left;
-    margin: 0 auto; /* Center the content */
     width: 90%; /* Ensure content fits within the screen */
+    margin: 0 auto; /* Center the content */
+  }
+
+  img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images are block-level */
+    margin: 0 auto; /* Center images */
   }
 }
