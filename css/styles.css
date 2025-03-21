@@ -75,8 +75,6 @@
   overflow: visible; /* Prevent clipping */
   transform: scale(1); /* Adjust scaling if needed */
   transform-origin: center; /* Ensure scaling is centered */
-  outline: 2px solid red; /* Debugging: Add a red outline */
-  background-color: rgba(255, 0, 0, 0.2); /* Debugging: Add a semi-transparent background */
 }
 
 .play-circle {
@@ -161,8 +159,9 @@
     height: auto; /* Allow height to adjust automatically */
     width: 100%; /* Make the stage width responsive */
     margin: 0 auto; /* Center the stage */
-    transform: scale(0.8); /* Scale down the entire stage */
+    transform: scale(0.75); /* Scale down the entire stage slightly more */
     transform-origin: top center; /* Ensure scaling is centered */
+    overflow: hidden; /* Prevent horizontal scrolling */
   }
 
   /* Ensure the container fits the screen */
@@ -186,7 +185,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 15%; /* Adjust size for smaller screens */
+    width: 14%; /* Slightly reduce size for smaller screens */
     height: auto;
   }
 
@@ -201,7 +200,7 @@
 
   #Google path {
     flex: 1; /* Allow letters to scale proportionally */
-    max-width: 12%; /* Adjust size for smaller screens */
+    max-width: 11%; /* Slightly reduce size for smaller screens */
     height: auto; /* Maintain aspect ratio */
     transform: none; /* Remove scaling */
     transform-origin: center; /* Ensure scaling is centered */
