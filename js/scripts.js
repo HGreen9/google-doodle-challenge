@@ -187,12 +187,15 @@ let isNightTime = false; // Track the current scene state
 
 vineRope.addEventListener("click", function () {
   if (!isNightTime) {
+    console.log("Switching to nighttime...");
+
     // Change to nighttime
     document.body.style.transition = "background-color 1s ease";
     document.body.style.backgroundColor = "#2c3e50"; // Dark blue for nighttime effect
 
     // Dim other elements except fireflies and vine rope
     const elementsToDim = document.querySelectorAll("svg:not(.fireFlies):not(#vine-rope):not(.bird):not(.music1):not(.music2):not(.music3)");
+    console.log("Elements to dim:", elementsToDim); // Debugging: Log the elements being dimmed
     elementsToDim.forEach(element => {
       element.style.transition = "opacity 1s ease";
       element.style.opacity = "0.5"; // Dim elements
@@ -200,22 +203,34 @@ vineRope.addEventListener("click", function () {
 
     // Show fireflies
     const fireFliesContainer = document.querySelector('.fireFlies');
-    fireFliesContainer.style.display = "block"; // Make fireflies visible
+    if (fireFliesContainer) {
+      fireFliesContainer.style.display = "block"; // Make fireflies visible
+      console.log("Fireflies are now visible.");
+    }
 
     // Hide bird and music notes
     const bird = document.querySelector('.bird');
     const musicNotes = document.querySelectorAll('.music1, .music2, .music3');
-    if (bird) bird.style.display = "none"; // Hide the bird
-    musicNotes.forEach(note => note.style.display = "none"); // Hide music notes
+    if (bird) {
+      bird.style.display = "none"; // Hide the bird
+      console.log("Bird is now hidden.");
+    }
+    musicNotes.forEach(note => {
+      note.style.display = "none"; // Hide music notes
+      console.log("Music note hidden:", note);
+    });
 
-    console.log("Scene changed to nighttime");
+    console.log("Scene changed to nighttime.");
   } else {
+    console.log("Switching to daytime...");
+
     // Change back to daytime
     document.body.style.transition = "background-color 1s ease";
     document.body.style.backgroundColor = "#ffffff"; // White for daytime effect
 
     // Restore other elements
     const elementsToRestore = document.querySelectorAll("svg:not(.fireFlies):not(#vine-rope):not(.bird):not(.music1):not(.music2):not(.music3)");
+    console.log("Elements to restore:", elementsToRestore); // Debugging: Log the elements being restored
     elementsToRestore.forEach(element => {
       element.style.transition = "opacity 1s ease";
       element.style.opacity = "1"; // Restore elements
@@ -223,15 +238,24 @@ vineRope.addEventListener("click", function () {
 
     // Hide fireflies
     const fireFliesContainer = document.querySelector('.fireFlies');
-    fireFliesContainer.style.display = "none"; // Hide fireflies
+    if (fireFliesContainer) {
+      fireFliesContainer.style.display = "none"; // Hide fireflies
+      console.log("Fireflies are now hidden.");
+    }
 
     // Show bird and music notes
     const bird = document.querySelector('.bird');
     const musicNotes = document.querySelectorAll('.music1, .music2, .music3');
-    if (bird) bird.style.display = "block"; // Show the bird
-    musicNotes.forEach(note => note.style.display = "block"); // Show music notes
+    if (bird) {
+      bird.style.display = "block"; // Show the bird
+      console.log("Bird is now visible.");
+    }
+    musicNotes.forEach(note => {
+      note.style.display = "block"; // Show music notes
+      console.log("Music note visible:", note);
+    });
 
-    console.log("Scene changed to daytime");
+    console.log("Scene changed to daytime.");
   }
 
   // Toggle the scene state
