@@ -83,3 +83,7 @@
 .play-triangle:hover {
   fill: #e21a1a; /* Darker hover effect */
 }
+
+.stop-square:hover {
+  fill: #e21a1a; /* Darker hover effect for the square */
+}

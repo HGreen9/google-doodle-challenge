@@ -66,12 +66,22 @@ function animateFireFlies() {
   const fireFlies = document.querySelectorAll('.fireFlies g');
 
   fireFlies.forEach(fireFly => {
+    // Animate position
     gsap.to(fireFly, {
       x: () => getRandom(-100, 100), // Random x position
       y: () => getRandom(-100, 100), // Random y position
-      duration: () => getRandom(2, 5), // Random duration
+      duration: () => getRandom(6, 10), // Slower random duration for movement
       repeat: -1, // Infinite repeat
       yoyo: true, // Yoyo effect
+      ease: "power1.inOut" // Easing function
+    });
+
+    // Animate opacity for flickering effect
+    gsap.to(fireFly, {
+      opacity: () => getRandom(0.3, 1), // Random opacity between 0.3 and 1
+      duration: () => getRandom(1, 3), // Random duration for flicker
+      repeat: -1, // Infinite repeat
+      yoyo: true, // Yoyo effect for smooth flickering
       ease: "power1.inOut" // Easing function
     });
   });
@@ -82,7 +92,11 @@ animateFireFlies();
 
 gsap.from(".bird", {
   opacity: 0,
-  delay: 4,
+  x: 35, // Start 200px to the right of its current position
+  y: -35, // Start 200px above its current position
+  delay: 3.5,
+  duration: 1, // Adjust duration for a smooth slide-in effect
+  ease: "power2.out" // Add easing for a natural flight effect
 });
 
 gsap.from(".music1, .music2, .music3", {
