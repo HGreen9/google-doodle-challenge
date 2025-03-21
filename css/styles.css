@@ -168,7 +168,6 @@ html, body {
     transform-origin: top center; /* Ensure scaling is centered */
     overflow: visible; /* Allow the SVG to be fully visible */
     max-width: 100%; /* Ensure the SVG does not exceed the viewport */
-    background-color: rgba(255, 0, 0, 0.2); /* Debugging: Light red background */
   }
 
   /* Adjust input field styles for smaller screens */
@@ -180,7 +179,6 @@ html, body {
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
     max-width: 100%; /* Ensure the input does not exceed the viewport */
-    background-color: rgba(0, 255, 0, 0.2); /* Debugging: Light green background */
   }
 
   /* Ensure the container fits the screen */
@@ -193,7 +191,6 @@ html, body {
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center-align elements */
     gap: 1em; /* Add spacing between children */
-    outline: 2px solid blue; /* Debugging: Blue outline */
     overflow-x: hidden; /* Prevent horizontal overflow */
   }
 
@@ -207,7 +204,6 @@ html, body {
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center-align elements */
     gap: 1em; /* Add spacing between children */
-    outline: 2px solid purple; /* Debugging: Purple outline */
     overflow-x: hidden; /* Prevent horizontal overflow */
   }
 
