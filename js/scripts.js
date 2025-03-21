@@ -65,6 +65,45 @@ window.addEventListener('load', function() {
       playButton.setAttribute('points', '165,221 185,231 165,241'); // Change back to triangle
     }
   });
+
+  // Add event listener to the vine rope
+  const vineRope = document.querySelector("#vine-rope");
+
+  // Track the current scene state
+  let isNightTime = false;
+
+  vineRope.addEventListener("click", function() {
+    if (!isNightTime) {
+      // Change to nighttime
+      document.body.style.transition = "background-color 1s ease";
+      document.body.style.backgroundColor = "#2c3e50"; // Dark blue for nighttime effect
+
+      // Dim other elements
+      const elementsToDim = document.querySelectorAll("svg");
+      elementsToDim.forEach(element => {
+        element.style.transition = "opacity 1s ease";
+        element.style.opacity = "0.5"; // Dim elements
+      });
+
+      console.log("Scene changed to nighttime");
+    } else {
+      // Change back to daytime
+      document.body.style.transition = "background-color 1s ease";
+      document.body.style.backgroundColor = "#ffffff"; // White for daytime effect
+
+      // Restore other elements
+      const elementsToRestore = document.querySelectorAll("svg");
+      elementsToRestore.forEach(element => {
+        element.style.transition = "opacity 1s ease";
+        element.style.opacity = "1"; // Restore elements
+      });
+
+      console.log("Scene changed to daytime");
+    }
+
+    // Toggle the scene state
+    isNightTime = !isNightTime;
+  });
 });
 
 // Function to generate a random number between min and max
