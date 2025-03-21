@@ -162,6 +162,12 @@
     transform-origin: top center; /* Ensure scaling is centered */
     overflow: hidden; /* Prevent horizontal scrolling */
     background-color: rgba(255, 0, 0, 0.2); /* Debugging: Light red background */
+    position: absolute;
+    top: 0; /* Place the SVG at the top */
+    left: 50%;
+    transform: translateX(-50%) scale(0.65); /* Center and scale */
+    margin: 0 !important; /* Remove any margins */
+    background-color: rgba(255, 0, 0, 0.2); /* Debugging: Light red background */
   }
 
   /* Ensure the container fits the screen */
@@ -233,6 +239,15 @@
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
     background-color: rgba(0, 255, 0, 0.2); /* Debugging: Light green background */
+    position: absolute;
+    top: 250px; /* Adjust this value to place the search bar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    padding: 0.6em;
+    margin: 0 !important;
+    font-size: 0.8em;
+    background-color: rgba(0, 255, 0, 0.2); /* Debugging: Light green background */
   }
 
   /* Ensure the template container fits the screen */
@@ -266,5 +281,23 @@
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure images are block-level */
     margin: 0 auto; /* Center images */
+  }
+
+  .scaled-container,
+  .template-container,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    outline: 2px solid blue; /* Debugging: Blue outline */
+  }
+
+  #stage {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  input {
+    margin: 0 !important;
+    padding: 0.6em;
   }
 }
