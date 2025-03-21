@@ -157,7 +157,7 @@
   #stage {
     height: auto; /* Allow height to adjust automatically */
     width: 100%; /* Make the stage width responsive */
-    margin: 0 auto 1em auto; /* Add a smaller bottom margin to reduce spacing */
+    margin: 0 auto 0.5em auto; /* Reduce bottom margin to minimize gap */
     transform: scale(0.65); /* Scale down the entire stage slightly more */
     transform-origin: top center; /* Ensure scaling is centered */
     overflow: hidden; /* Prevent horizontal scrolling */
@@ -194,7 +194,7 @@
     justify-content: space-evenly; /* Distribute letters evenly */
     align-items: center; /* Center the letters vertically */
     width: 100%; /* Ensure the letters span the full width */
-    margin: 1em auto; /* Add spacing around the letters */
+    margin: 0 auto; /* Remove vertical spacing around the letters */
   }
 
   #Google path {
@@ -225,7 +225,7 @@
   input {
     width: 70%; /* Reduce width to fit smaller screens */
     padding: 0.6em; /* Adjust padding for smaller input */
-    margin: 1em auto; /* Reduce vertical spacing */
+    margin: 0.5em auto; /* Reduce vertical spacing */
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
   }

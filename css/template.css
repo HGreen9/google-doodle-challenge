@@ -64,15 +64,21 @@ input {
     font-size: 0.7em; /* Slightly smaller font size for smaller screens */
     padding: 0.3em 0.6em; /* Reduce padding for compact buttons */
     max-width: 150px; /* Prevent buttons from growing too large */
-    margin: 0.5em auto; /* Reduce vertical spacing */
+    margin: 0.3em auto; /* Reduce vertical spacing */
   }
 
   /* Input field styles */
   input {
     width: 90%; /* Slightly reduce width for better alignment */
-    padding: 0.6em; /* Reduce padding for a more compact input field */
-    margin: 0.5em auto; /* Reduce vertical spacing */
+    padding: 0.5em; /* Reduce padding for a more compact input field */
+    margin: 0.3em auto; /* Reduce vertical spacing */
     font-size: 0.8em; /* Keep font size smaller for smaller screens */
     max-width: 350px; /* Prevent the input field from growing too large */
+  }
+
+  /* Search container */
+  #search {
+    margin: 0.3em auto; /* Reduce vertical spacing around the search container */
+    width: 100%; /* Ensure it spans the full width */
   }
 }
