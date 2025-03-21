@@ -156,72 +156,11 @@
   /* Ensure the stage is responsive */
   #stage {
     position: relative; /* Allow the SVG to flow naturally */
-    margin: 1em auto; /* Add spacing above and center the SVG */
+    margin: 2em auto; /* Add spacing above and center the SVG */
     transform: scale(0.65); /* Scale down the entire stage slightly more */
     transform-origin: top center; /* Ensure scaling is centered */
-    overflow: hidden; /* Prevent horizontal scrolling */
+    overflow: visible; /* Allow the SVG to be fully visible */
     background-color: rgba(255, 0, 0, 0.2); /* Debugging: Light red background */
-  }
-
-  /* Ensure the container fits the screen */
-  .scaled-container {
-    width: 100%;
-    margin: 1em 0; /* Add spacing at the top and bottom */
-    padding: 0; /* Remove any unintended padding */
-    position: relative;
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center-align elements */
-    gap: 1em; /* Add spacing between children */
-    outline: 2px solid blue; /* Debugging: Blue outline */
-  }
-
-  /* Adjust the vine rope for smaller screens */
-  #vine-rope {
-    stroke-width: 6px; /* clickable stroke width */
-  }
-
-  /* Center and scale the play button container */
-  .play-button-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 12%; /* Slightly reduce size for smaller screens */
-    height: auto;
-  }
-
-  /* Adjust the Google letters */
-  #Google {
-    display: flex; /* Use flexbox to align letters */
-    justify-content: space-evenly; /* Distribute letters evenly */
-    align-items: center; /* Center the letters vertically */
-    width: 100%; /* Ensure the letters span the full width */
-    margin: 0 auto; /* Remove vertical spacing around the letters */
-  }
-
-  #Google path {
-    flex: 1; /* Allow letters to scale proportionally */
-    max-width: 11%; /* Slightly reduce size for smaller screens */
-    height: auto; /* Maintain aspect ratio */
-    transform: none; /* Remove scaling */
-    transform-origin: center; /* Ensure scaling is centered */
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* Adjust drop shadow */
-  }
-
-  /* Adjust button container spacing */
-  .button-container {
-    display: flex; /* Use flexbox to align buttons horizontally */
-    justify-content: center; /* Center the buttons */
-    flex-wrap: nowrap; /* Prevent buttons from stacking */
-    gap: 0.5em; /* Reduce spacing between buttons */
-    margin: 0.2em auto; /* Reduce vertical spacing */
-  }
-
-  button {
-    font-size: 0.7em; /* Reduce font size for smaller screens */
-    padding: 0.3em 0.6em; /* Adjust padding for smaller buttons */
-    display: inline-block; /* Ensure buttons are inline */
   }
 
   /* Adjust input field styles for smaller screens */
@@ -235,10 +174,23 @@
     background-color: rgba(0, 255, 0, 0.2); /* Debugging: Light green background */
   }
 
+  /* Ensure the container fits the screen */
+  .scaled-container {
+    width: 100%;
+    margin: 2em 0; /* Add spacing at the top and bottom */
+    padding: 0; /* Remove any unintended padding */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align elements */
+    gap: 1em; /* Add spacing between children */
+    outline: 2px solid blue; /* Debugging: Blue outline */
+  }
+
   /* Ensure the template container fits the screen */
   .template-container {
     width: 100%;
-    margin: 1em 0; /* Add spacing at the top and bottom */
+    margin: 2em 0; /* Add spacing at the top and bottom */
     padding: 0; /* Remove any unintended padding */
     position: relative;
     display: flex;
@@ -248,41 +200,18 @@
     outline: 2px solid purple; /* Debugging: Purple outline */
   }
 
-  /* Adjust header and footer for smaller screens */
-  .template-header, .template-footer {
-    width: 100%; /* Ensure they span the full width */
-    text-align: center; /* Center-align text */
+  /* Adjust button container spacing */
+  .button-container {
+    display: flex; /* Use flexbox to align buttons horizontally */
+    justify-content: center; /* Center the buttons */
+    flex-wrap: nowrap; /* Prevent buttons from stacking */
+    gap: 0.5em; /* Reduce spacing between buttons */
+    margin: 0.5em auto; /* Add vertical spacing */
   }
 
-  /* Adjust content for smaller screens */
-  .template-content {
-    width: 90%; /* Ensure content fits within the screen */
-    margin: 0 auto; /* Center the content */
-  }
-
-  /* Make images responsive */
-  img {
-    max-width: 100%; /* Ensure images don’t overflow */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure images are block-level */
-    margin: 0 auto; /* Center images */
-  }
-
-  .scaled-container,
-  .template-container,
-  body {
-    margin: 0 !important;
-    padding: 0 !important;
-    outline: 2px solid blue; /* Debugging: Blue outline */
-  }
-
-  #stage {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  input {
-    margin: 0 !important;
-    padding: 0.6em;
+  button {
+    font-size: 0.7em; /* Reduce font size for smaller screens */
+    padding: 0.3em 0.6em; /* Adjust padding for smaller buttons */
+    display: inline-block; /* Ensure buttons are inline */
   }
 }
