@@ -224,7 +224,7 @@
   /* Adjust input field styles for smaller screens */
   input {
     width: 70%; /* Reduce width to fit smaller screens */
-    padding: 0.6em; /* Adjust padding for smaller input */
+    padding: 0.4em; /* Adjust padding for smaller input */
     margin: 1em auto; /* Center the input field */
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
