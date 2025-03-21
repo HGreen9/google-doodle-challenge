@@ -11,11 +11,11 @@ In my artwork, I’ve crafted a smooth transition from day to night, capturing t
 ## Resources
 
 * [Figma](https://www.figma.com)
-<!-- * [CodePen](https://codepen.io/)
-* [Copilot](https://copilot.microsoft.com/onboarding)
-* [ChatGPT](https://chatgpt.com/)
-* [Grammarly](https://app.grammarly.com/) -->
 * [Gsap](https://gsap.com/)
 * [Adobe Illustrator](https://creativecloud.adobe.com/)
 * [Pixabay](https://pixabay.com/sound-effects/chirping-birds-ambience-217410/)
 * [Pixabay](https://pixabay.com/sound-effects/night-sound-of-cricket-138549/)
+<!-- * [CodePen](https://codepen.io/)
+* [Copilot](https://copilot.microsoft.com/onboarding)
+* [ChatGPT](https://chatgpt.com/)
+* [Grammarly](https://app.grammarly.com/) -->
