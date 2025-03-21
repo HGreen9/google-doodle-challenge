@@ -113,7 +113,6 @@
 }
 
 #O1 {
-  outline: 2px solid red; /* Add a red outline for visibility */
   opacity: 1; /* Ensure it is fully visible */
   visibility: visible; /* Ensure it is not hidden */
   transform: none; /* Remove any scaling or transformations */
