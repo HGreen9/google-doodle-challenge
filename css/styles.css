@@ -211,22 +211,22 @@
     display: flex; /* Use flexbox to align buttons horizontally */
     justify-content: center; /* Center the buttons */
     flex-wrap: nowrap; /* Prevent buttons from stacking */
-    gap: 1em; /* Add spacing between buttons */
+    gap: 0.5em; /* Reduce spacing between buttons */
     margin: 1em auto; /* Center the button container */
   }
 
   button {
-    font-size: 0.8em; /* Slightly reduce font size */
-    padding: 0.4em 0.8em; /* Adjust padding */
+    font-size: 0.7em; /* Reduce font size for smaller screens */
+    padding: 0.3em 0.6em; /* Adjust padding for smaller buttons */
     display: inline-block; /* Ensure buttons are inline */
   }
 
   /* Adjust input field styles for smaller screens */
   input {
-    width: 90%; /* Adjust width to fit smaller screens */
-    padding: 0.8em; /* Adjust padding */
+    width: 80%; /* Reduce width to fit smaller screens */
+    padding: 0.6em; /* Adjust padding for smaller input */
     margin: 1em auto; /* Center the input field */
-    font-size: 0.9em; /* Reduce font size */
+    font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
   }
 
