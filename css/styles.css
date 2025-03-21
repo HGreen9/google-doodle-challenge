@@ -66,8 +66,17 @@
     animation-delay: 2s;
   }
 
+/* Ensure the play-button-container is visible */
 .play-button-container {
-  position: relative;
+  display: block; /* Ensure it is not hidden */
+  position: relative; /* Allow positioning within the SVG */
+  width: auto; /* Ensure it doesn't collapse */
+  height: auto;
+  overflow: visible; /* Prevent clipping */
+  transform: scale(1); /* Adjust scaling if needed */
+  transform-origin: center; /* Ensure scaling is centered */
+  outline: 2px solid red; /* Debugging: Add a red outline */
+  background-color: rgba(255, 0, 0, 0.2); /* Debugging: Add a semi-transparent background */
 }
 
 .play-circle {
@@ -103,6 +112,13 @@
 
 #Google path {
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.6)); /* Drop shadow for Google letters */
+}
+
+#O1 {
+  outline: 2px solid red; /* Add a red outline for visibility */
+  opacity: 1; /* Ensure it is fully visible */
+  visibility: visible; /* Ensure it is not hidden */
+  transform: none; /* Remove any scaling or transformations */
 }
 
 /* Responsive styles for mobile devices */
