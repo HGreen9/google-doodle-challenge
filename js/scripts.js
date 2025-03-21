@@ -68,11 +68,33 @@ window.addEventListener('load', function() {
 
   // Add event listener to the vine rope
   const vineRope = document.querySelector("#vine-rope");
+  console.log(vineRope); // Should log the vine element
 
   // Track the current scene state
   let isNightTime = false;
 
   vineRope.addEventListener("click", function() {
+    // Animate the vine to stretch and bounce
+    gsap.to("#vine-rope", {
+      scaleY: 1.2, // Stretch vertically
+      duration: 0.2, // Quick stretch
+      yoyo: true, // Return to original state
+      repeat: 1, // Repeat once for the bounce effect
+      ease: "power1.inOut", // Smooth easing
+      transformOrigin: "center top", // Stretch from the top
+    });
+
+    gsap.to("#vine-rope path", {
+      scaleY: 1.2, // Stretch vertically
+      duration: 0.2, // Quick stretch
+      yoyo: true, // Return to original state
+      repeat: 1, // Repeat once for the bounce effect
+      ease: "power1.inOut", // Smooth easing
+      transformOrigin: "center top", // Stretch from the top
+    });
+
+    console.log("Stretch and bounce animation triggered");
+
     if (!isNightTime) {
       // Change to nighttime
       document.body.style.transition = "background-color 1s ease";
@@ -103,6 +125,18 @@ window.addEventListener('load', function() {
 
     // Toggle the scene state
     isNightTime = !isNightTime;
+  });
+
+  vineRope.addEventListener("click", function() {
+    console.log("Vine clicked! Starting animation...");
+    gsap.to("#vine-rope path", {
+      scaleY: 1.2,
+      duration: 0.2,
+      yoyo: true,
+      repeat: 1,
+      ease: "power1.inOut",
+      transformOrigin: "center top",
+    });
   });
 });
 

@@ -89,10 +89,16 @@
 }
 
 #vine-rope {
-  stroke: #285711;
+  stroke: #1a4405;
   stroke-width: 6px;
   animation: sway 4s infinite;
   filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.5)); /* Drop shadow for the vine */
+  transform-origin: center top;
+}
+
+#vine-rope:hover {
+  stroke: #07611b;
+  /* #0b9f44; */
 }
 
 #Google path {
