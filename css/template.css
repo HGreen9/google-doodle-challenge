@@ -59,14 +59,20 @@ input {
 
 /* Responsive adjustments */
 @media (max-width: 480px) {
+  /* Button styles */
   button {
-    font-size: 0.8em; /* Reduce font size for smaller screens */
-    padding: 0.4em 0.8em; /* Adjust padding */
+    font-size: 0.7em; /* Slightly smaller font size for smaller screens */
+    padding: 0.3em 0.6em; /* Reduce padding for compact buttons */
+    max-width: 150px; /* Prevent buttons from growing too large */
+    margin: 0.5em auto; /* Reduce vertical spacing */
   }
 
+  /* Input field styles */
   input {
-    width: 100%; /* Make input span the full width */
-    padding: 0.8em; /* Adjust padding */
-    margin: 1em auto; /* Center the input field */
+    width: 90%; /* Slightly reduce width for better alignment */
+    padding: 0.6em; /* Reduce padding for a more compact input field */
+    margin: 0.5em auto; /* Reduce vertical spacing */
+    font-size: 0.8em; /* Keep font size smaller for smaller screens */
+    max-width: 350px; /* Prevent the input field from growing too large */
   }
 }
