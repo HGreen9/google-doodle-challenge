@@ -27,39 +27,46 @@ gsap.from("#vine-rope", {
 });
 
 window.addEventListener('load', function() {
-  var audio = document.getElementById('background-audio');
-  audio.controls = false; // Hide the audio player controls
+  // Add references to both audio elements
+  const dayAudio = document.getElementById('day-audio');
+  const nightAudio = document.getElementById('night-audio');
 
-  console.log('Audio element:', audio);
+  // Ensure both audio players have their controls hidden
+  dayAudio.controls = false;
+  nightAudio.controls = false;
+
+  console.log('Audio elements:', dayAudio, nightAudio);
 
   // Function to start audio playback
-  function startAudioPlayback() {
+  function startAudioPlayback(audio) {
     audio.play().then(function() {
-      console.log('Audio playback started');
+      console.log('Audio playback started:', audio.id);
     }).catch(function(error) {
       console.log('Audio playback failed:', error);
     });
   }
 
   // Function to stop audio playback
-  function stopAudioPlayback() {
+  function stopAudioPlayback(audio) {
     audio.pause();
     audio.currentTime = 0; // Reset audio to the beginning
-    console.log('Audio playback stopped');
+    console.log('Audio playback stopped:', audio.id);
   }
 
   // Add event listener to the play button
   const playButton = document.querySelector('.play-triangle'); // Select the element with the class 'play-triangle'
   playButton.addEventListener('click', function() {
+    const currentAudio = isNightTime ? nightAudio : dayAudio; // Choose the correct audio based on the scene state
+
     if (playButton.classList.contains('play-triangle')) {
       // If it's a triangle, play the audio and turn it into a square
-      startAudioPlayback();
+      startAudioPlayback(currentAudio);
       playButton.classList.remove('play-triangle');
       playButton.classList.add('stop-square');
       playButton.setAttribute('points', '165,221 185,221 185,241 165,241'); // Change to square
     } else {
       // If it's a square, stop the audio and turn it back into a triangle
-      stopAudioPlayback();
+      stopAudioPlayback(currentAudio);
       playButton.classList.remove('stop-square');
       playButton.classList.add('play-triangle');
       playButton.setAttribute('points', '165,221 185,231 165,241'); // Change back to triangle
