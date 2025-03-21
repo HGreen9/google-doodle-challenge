@@ -21,39 +21,21 @@ window.addEventListener('load', function() {
 
   console.log('Audio element:', audio);
 
+  // Function to start audio playback
   function startAudioPlayback() {
-    // Ensure the audio is loaded and ready before attempting to play it
-    audio.addEventListener('canplaythrough', function() {
-      console.log('canplaythrough event fired');
-      setTimeout(function() {
-        audio.play().then(function() {
-          console.log('Audio playback started');
-        }).catch(function(error) {
-          console.log('Audio playback failed:', error);
-        });
-      }, 4000); // 4000 milliseconds = 4 seconds delay
+    audio.play().then(function() {
+      console.log('Audio playback started');
+    }).catch(function(error) {
+      console.log('Audio playback failed:', error);
     });
-
-    // Fallback in case 'canplaythrough' event is not fired
-    setTimeout(function() {
-      if (audio.paused) {
-        console.log('Fallback: attempting to play audio');
-        audio.play().then(function() {
-          console.log('Audio playback started');
-        }).catch(function(error) {
-          console.log('Audio playback failed:', error);
-        });
-      }
-    }, 6000); // 6000 milliseconds = 6 seconds delay
-
-    // Remove the event listeners after the first interaction
-    window.removeEventListener('click', startAudioPlayback);
-    window.removeEventListener('keydown', startAudioPlayback);
   }
 
-  // Add event listeners for user interaction
-  window.addEventListener('click', startAudioPlayback);
-  window.addEventListener('keydown', startAudioPlayback);
+  // Add event listener to the play button
+  const playButton = document.querySelector('.play-triangle'); // Select the element with the class 'play-triangle'
+  playButton.addEventListener('click', function() {
+    console.log('Play button clicked');
+    startAudioPlayback();
+  });
 });
 
 // Function to generate a random number between min and max

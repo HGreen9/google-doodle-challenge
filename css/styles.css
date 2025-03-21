@@ -65,3 +65,21 @@
     animation: sway 4s infinite;
     animation-delay: 2s;
   }
+
+.play-button-container {
+  position: relative;
+}
+
+.play-circle {
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.play-triangle {
+  cursor: pointer;
+  transition: fill 0.3s ease;
+}
+
+.play-triangle:hover {
+  fill: #e21a1a; /* Darker hover effect */
+}
