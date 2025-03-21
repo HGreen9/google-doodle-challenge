@@ -145,6 +145,8 @@
     height: auto; /* Allow height to adjust automatically */
     width: 100%; /* Make the stage width responsive */
     margin: 0 auto; /* Center the stage */
+    transform: scale(0.8); /* Scale down the entire stage */
+    transform-origin: top center; /* Ensure scaling is centered */
   }
 
   /* Ensure the container fits the screen */
@@ -200,8 +202,8 @@
   }
 
   button {
-    font-size: 0.9em; /* Slightly reduce font size */
-    padding: 0.5em 1em; /* Adjust padding */
+    font-size: 0.8em; /* Slightly reduce font size */
+    padding: 0.4em 0.8em; /* Adjust padding */
     display: inline-block; /* Ensure buttons are inline */
   }
 
