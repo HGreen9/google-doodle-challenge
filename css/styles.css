@@ -140,73 +140,91 @@
 
 /* Enhanced responsive styles for mobile devices */
 @media (max-width: 480px) { /* Target smaller screens like phones */
+  /* Ensure the stage is responsive */
   #stage {
     height: auto; /* Allow height to adjust automatically */
     width: 100%; /* Make the stage width responsive */
     margin: 0 auto; /* Center the stage */
   }
 
+  /* Ensure the container fits the screen */
   .scaled-container {
-    width: 100%; /* Ensure the container fits the screen */
+    width: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    position: relative; /* Ensure proper positioning */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align elements */
   }
 
+  /* Adjust the vine rope for smaller screens */
   #vine-rope {
-    stroke-width: 3px; /* Further reduce stroke width for smaller screens */
+    stroke-width: 3px; /* Reduce stroke width */
   }
 
+  /* Center and scale the play button container */
   .play-button-container {
-    transform: scale(1); /* Keep play button container at normal scale */
-    position: absolute; /* Adjust positioning for mobile */
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
+  /* Scale down the play button elements */
   .play-circle, .play-triangle {
-    transform: scale(0.5); /* Scale down the play button elements */
+    width: 50%; /* Adjust size dynamically */
+    height: auto;
   }
 
+  /* Scale down the Google letters */
   #Google path {
-    transform: scale(0.5); /* Scale down the Google letters */
+    transform: scale(0.8); /* Slightly reduce size */
     transform-origin: center; /* Ensure scaling is centered */
-    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* Adjust drop shadow for smaller size */
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* Adjust drop shadow */
   }
 
+  /* Adjust button styles for smaller screens */
   button {
-    font-size: 0.8em; /* Reduce button font size */
-    padding: 0.4em 0.8em; /* Adjust button padding */
+    font-size: 0.9em; /* Slightly reduce font size */
+    padding: 0.5em 1em; /* Adjust padding */
     margin: 1em auto; /* Center buttons */
-    display: block; /* Ensure buttons are block-level for proper alignment */
+    display: block; /* Ensure buttons are block-level */
   }
 
+  /* Adjust input field styles for smaller screens */
   input {
-    width: 90%; /* Adjust input width to fit smaller screens */
-    padding: 0.8em; /* Adjust padding for smaller size */
+    width: 90%; /* Adjust width to fit smaller screens */
+    padding: 0.8em; /* Adjust padding */
     margin: 1em auto; /* Center the input field */
     font-size: 0.9em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
   }
 
+  /* Ensure the template container fits the screen */
   .template-container {
-    width: 100%; /* Ensure the container fits the screen */
+    width: 100%;
     margin: 0 auto; /* Center the container */
-    position: relative; /* Ensure proper positioning */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align elements */
   }
 
+  /* Adjust header and footer for smaller screens */
   .template-header, .template-footer {
     width: 100%; /* Ensure they span the full width */
     text-align: center; /* Center-align text */
   }
 
+  /* Adjust content for smaller screens */
   .template-content {
     width: 90%; /* Ensure content fits within the screen */
     margin: 0 auto; /* Center the content */
   }
 
+  /* Make images responsive */
   img {
-    max-width: 100%; /* Make images responsive */
+    max-width: 100%; /* Ensure images don’t overflow */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensure images are block-level */
     margin: 0 auto; /* Center images */
