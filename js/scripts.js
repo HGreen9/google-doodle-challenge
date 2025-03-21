@@ -92,8 +92,8 @@ animateFireFlies();
 
 gsap.from(".bird", {
   opacity: 0,
-  x: 35, // Start 200px to the right of its current position
-  y: -35, // Start 200px above its current position
+  x: 30, // Start 200px to the right of its current position
+  y: -30, // Start 200px above its current position
   delay: 3.5,
   duration: 1, // Adjust duration for a smooth slide-in effect
   ease: "power2.out" // Add easing for a natural flight effect
