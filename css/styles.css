@@ -157,7 +157,7 @@
   #stage {
     height: auto; /* Allow height to adjust automatically */
     width: 100%; /* Make the stage width responsive */
-    margin: 0 auto; /* Center the stage */
+    margin: 0 auto 1em auto; /* Add a smaller bottom margin to reduce spacing */
     transform: scale(0.65); /* Scale down the entire stage slightly more */
     transform-origin: top center; /* Ensure scaling is centered */
     overflow: hidden; /* Prevent horizontal scrolling */
@@ -212,7 +212,7 @@
     justify-content: center; /* Center the buttons */
     flex-wrap: nowrap; /* Prevent buttons from stacking */
     gap: 0.5em; /* Reduce spacing between buttons */
-    margin: 1em auto; /* Center the button container */
+    margin: 0.5em auto; /* Reduce vertical spacing */
   }
 
   button {
@@ -224,8 +224,8 @@
   /* Adjust input field styles for smaller screens */
   input {
     width: 70%; /* Reduce width to fit smaller screens */
-    padding: 0.4em; /* Adjust padding for smaller input */
-    margin: 10px auto; /* Center the input field */
+    padding: 0.6em; /* Adjust padding for smaller input */
+    margin: 1em auto; /* Reduce vertical spacing */
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
   }
