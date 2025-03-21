@@ -174,6 +174,57 @@ function animateFireFlies() {
 // Call the function to start the animation
 animateFireFlies();
 
+// Hide fireflies on page load
+window.addEventListener('load', function () {
+  const fireFliesContainer = document.querySelector('.fireFlies');
+  if (fireFliesContainer) {
+    fireFliesContainer.style.display = "none"; // Ensure fireflies are hidden initially
+  }
+});
+
+// Add event listener to the vine rope
+const vineRope = document.querySelector("#vine-rope");
+let isNightTime = false; // Track the current scene state
+
+vineRope.addEventListener("click", function () {
+  if (!isNightTime) {
+    // Change to nighttime
+    document.body.style.transition = "background-color 1s ease";
+    document.body.style.backgroundColor = "#2c3e50"; // Dark blue for nighttime effect
+
+    // Show fireflies
+    const fireFliesContainer = document.querySelector('.fireFlies');
+    fireFliesContainer.style.display = "block"; // Make fireflies visible
+
+    // Hide bird and music notes
+    const bird = document.querySelector('.bird');
+    const musicNotes = document.querySelectorAll('.music1, .music2, .music3');
+    if (bird) bird.style.display = "none"; // Hide the bird
+    musicNotes.forEach(note => note.style.display = "none"); // Hide music notes
+
+    console.log("Scene changed to nighttime");
+  } else {
+    // Change back to daytime
+    document.body.style.transition = "background-color 1s ease";
+    document.body.style.backgroundColor = "#ffffff"; // White for daytime effect
+
+    // Hide fireflies
+    const fireFliesContainer = document.querySelector('.fireFlies');
+    fireFliesContainer.style.display = "none"; // Hide fireflies
+
+    // Show bird and music notes
+    const bird = document.querySelector('.bird');
+    const musicNotes = document.querySelectorAll('.music1, .music2, .music3');
+    if (bird) bird.style.display = "block"; // Show the bird
+    musicNotes.forEach(note => note.style.display = "block"); // Show music notes
+
+    console.log("Scene changed to daytime");
+  }
+
+  // Toggle the scene state
+  isNightTime = !isNightTime;
+});
+
 gsap.from(".bird", {
   opacity: 0,
   x: 30, // Start 200px to the right of its current position
