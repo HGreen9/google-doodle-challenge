@@ -157,7 +157,7 @@
   #stage {
     height: auto; /* Allow height to adjust automatically */
     width: 100%; /* Make the stage width responsive */
-    margin: 0 auto 0.1em auto !important; /* Force smaller bottom margin */
+    margin: 0 auto 0 !important; /* Remove bottom margin */
     transform: scale(0.65); /* Scale down the entire stage slightly more */
     transform-origin: top center; /* Ensure scaling is centered */
     overflow: hidden; /* Prevent horizontal scrolling */
@@ -173,7 +173,7 @@
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center-align elements */
-    gap: 0.1em !important; /* Force smaller spacing between children */
+    gap: 0 !important; /* Remove spacing between children */
     outline: 2px solid blue; /* Debugging: Blue outline */
   }
 
@@ -229,7 +229,7 @@
   input {
     width: 70%; /* Reduce width to fit smaller screens */
     padding: 0.6em; /* Adjust padding for smaller input */
-    margin: 0.1em auto !important; /* Force smaller vertical spacing */
+    margin: 0 !important; /* Remove vertical spacing */
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
     background-color: rgba(0, 255, 0, 0.2); /* Debugging: Light green background */
@@ -238,11 +238,14 @@
   /* Ensure the template container fits the screen */
   .template-container {
     width: 100%;
-    margin: 0 auto; /* Center the container */
+    margin: 0 !important; /* Remove any unintended margins */
+    padding: 0 !important; /* Remove any unintended padding */
     position: relative;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center-align elements */
+    gap: 0 !important; /* Remove spacing between children */
+    outline: 2px solid purple; /* Debugging: Purple outline */
   }
 
   /* Adjust header and footer for smaller screens */
