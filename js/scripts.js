@@ -30,11 +30,29 @@ window.addEventListener('load', function() {
     });
   }
 
+  // Function to stop audio playback
+  function stopAudioPlayback() {
+    audio.pause();
+    audio.currentTime = 0; // Reset audio to the beginning
+    console.log('Audio playback stopped');
+  }
+
   // Add event listener to the play button
   const playButton = document.querySelector('.play-triangle'); // Select the element with the class 'play-triangle'
   playButton.addEventListener('click', function() {
-    console.log('Play button clicked');
-    startAudioPlayback();
+    if (playButton.classList.contains('play-triangle')) {
+      // If it's a triangle, play the audio and turn it into a square
+      startAudioPlayback();
+      playButton.classList.remove('play-triangle');
+      playButton.classList.add('stop-square');
+      playButton.setAttribute('points', '165,221 185,221 185,241 165,241'); // Change to square
+    } else {
+      // If it's a square, stop the audio and turn it back into a triangle
+      stopAudioPlayback();
+      playButton.classList.remove('stop-square');
+      playButton.classList.add('play-triangle');
+      playButton.setAttribute('points', '165,221 185,231 165,241'); // Change back to triangle
+    }
   });
 });
 
