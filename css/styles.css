@@ -157,7 +157,7 @@
   #stage {
     height: auto; /* Allow height to adjust automatically */
     width: 100%; /* Make the stage width responsive */
-    margin: 0 auto 0.5em auto; /* Reduce bottom margin to minimize gap */
+    margin: 0 auto 0.2em auto; /* Reduce bottom margin to minimize gap */
     transform: scale(0.65); /* Scale down the entire stage slightly more */
     transform-origin: top center; /* Ensure scaling is centered */
     overflow: hidden; /* Prevent horizontal scrolling */
@@ -166,11 +166,13 @@
   /* Ensure the container fits the screen */
   .scaled-container {
     width: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove any unintended margins */
+    padding: 0; /* Remove any unintended padding */
     position: relative;
     display: flex;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center-align elements */
+    gap: 0.2em; /* Reduce spacing between children */
   }
 
   /* Adjust the vine rope for smaller screens */
@@ -206,13 +208,13 @@
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* Adjust drop shadow */
   }
 
-  /* Adjust button styles for smaller screens */
+  /* Adjust button container spacing */
   .button-container {
     display: flex; /* Use flexbox to align buttons horizontally */
     justify-content: center; /* Center the buttons */
     flex-wrap: nowrap; /* Prevent buttons from stacking */
     gap: 0.5em; /* Reduce spacing between buttons */
-    margin: 0.5em auto; /* Reduce vertical spacing */
+    margin: 0.2em auto; /* Reduce vertical spacing */
   }
 
   button {
@@ -225,7 +227,7 @@
   input {
     width: 70%; /* Reduce width to fit smaller screens */
     padding: 0.6em; /* Adjust padding for smaller input */
-    margin: 0.5em auto; /* Reduce vertical spacing */
+    margin: 0.2em auto; /* Reduce vertical spacing */
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
   }
