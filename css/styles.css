@@ -104,3 +104,36 @@
 #Google path {
   filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.6)); /* Drop shadow for Google letters */
 }
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  #stage {
+    height: 200px; /* Adjust height for smaller screens */
+    width: 100%; /* Make the stage width responsive */
+  }
+
+  #vine-rope {
+    stroke-width: 4px; /* Reduce stroke width for smaller screens */
+    animation: sway 3s infinite; /* Adjust animation duration */
+  }
+
+  .play-button-container {
+    position: absolute; /* Adjust positioning for mobile */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .play-circle, .play-triangle {
+    cursor: pointer;
+    transition: fill 0.2s ease; /* Slightly faster transition for mobile */
+  }
+
+  .play-triangle:hover, .stop-square:hover {
+    fill: #d11a1a; /* Slightly lighter hover effect for mobile */
+  }
+
+  #Google path {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); /* Adjust drop shadow for smaller screens */
+  }
+}
