@@ -1,4 +1,4 @@
-# My Topic Google Doodle
+# Medieval Google Doodle
 
 I chose a medieval theme for my doodle because I have a deep passion for the enchanting allure of fantasy landscapes, valiant knights, mystical dragons, and the haunting beauty of ancient ruins. The dark, moss-covered castles that rise regally but ominous against the sky, along with the rich folklore steeped in legend, spark my imagination and take me to a world of adventure and potential every time. 
 
