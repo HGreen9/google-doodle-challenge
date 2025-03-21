@@ -118,6 +118,13 @@
   transform: none; /* Remove any scaling or transformations */
 }
 
+/* Global styles to prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden; /* Disable horizontal scrolling */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+}
+
 /* Responsive styles for mobile devices */
 @media (max-width: 768px) {
   #stage {
@@ -160,6 +167,7 @@
     transform: scale(0.65); /* Scale down the entire stage slightly more */
     transform-origin: top center; /* Ensure scaling is centered */
     overflow: visible; /* Allow the SVG to be fully visible */
+    max-width: 100%; /* Ensure the SVG does not exceed the viewport */
     background-color: rgba(255, 0, 0, 0.2); /* Debugging: Light red background */
   }
 
@@ -171,12 +179,13 @@
     margin: 1em auto; /* Add spacing above and below */
     font-size: 0.8em; /* Reduce font size */
     display: block; /* Ensure input is block-level */
+    max-width: 100%; /* Ensure the input does not exceed the viewport */
     background-color: rgba(0, 255, 0, 0.2); /* Debugging: Light green background */
   }
 
   /* Ensure the container fits the screen */
   .scaled-container {
-    width: 100%;
+    width: 100%; /* Ensure the container spans the full width */
     margin: 2em 0; /* Add spacing at the top and bottom */
     padding: 0; /* Remove any unintended padding */
     position: relative;
@@ -185,11 +194,12 @@
     align-items: center; /* Center-align elements */
     gap: 1em; /* Add spacing between children */
     outline: 2px solid blue; /* Debugging: Blue outline */
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
 
   /* Ensure the template container fits the screen */
   .template-container {
-    width: 100%;
+    width: 100%; /* Ensure the container spans the full width */
     margin: 2em 0; /* Add spacing at the top and bottom */
     padding: 0; /* Remove any unintended padding */
     position: relative;
@@ -198,6 +208,7 @@
     align-items: center; /* Center-align elements */
     gap: 1em; /* Add spacing between children */
     outline: 2px solid purple; /* Debugging: Purple outline */
+    overflow-x: hidden; /* Prevent horizontal overflow */
   }
 
   /* Adjust button container spacing */
@@ -207,6 +218,7 @@
     flex-wrap: nowrap; /* Prevent buttons from stacking */
     gap: 0.5em; /* Reduce spacing between buttons */
     margin: 0.5em auto; /* Add vertical spacing */
+    max-width: 100%; /* Ensure the button container does not exceed the viewport */
   }
 
   button {
