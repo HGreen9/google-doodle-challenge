@@ -170,25 +170,35 @@
     transform: translate(-50%, -50%);
   }
 
-  /* Scale down the play button elements */
-  .play-circle, .play-triangle {
-    width: 50%; /* Adjust size dynamically */
-    height: auto;
+  /* Adjust the Google letters */
+  #Google {
+    display: flex; /* Use flexbox to align letters */
+    justify-content: center; /* Center the letters horizontally */
+    align-items: center; /* Center the letters vertically */
+    width: 100%; /* Ensure the letters span the full width */
+    margin: 1em auto; /* Add spacing around the letters */
   }
 
-  /* Scale down the Google letters */
   #Google path {
-    transform: scale(0.8); /* Slightly reduce size */
+    width: auto; /* Let the browser calculate the width */
+    height: 50px; /* Adjust the height of the letters */
+    transform: none; /* Remove scaling */
     transform-origin: center; /* Ensure scaling is centered */
     filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* Adjust drop shadow */
   }
 
   /* Adjust button styles for smaller screens */
+  .button-container {
+    display: flex; /* Use flexbox to align buttons horizontally */
+    justify-content: center; /* Center the buttons */
+    gap: 1em; /* Add spacing between buttons */
+    margin: 1em auto; /* Center the button container */
+  }
+
   button {
     font-size: 0.9em; /* Slightly reduce font size */
     padding: 0.5em 1em; /* Adjust padding */
-    margin: 1em auto; /* Center buttons */
-    display: block; /* Ensure buttons are block-level */
+    display: inline-block; /* Ensure buttons are inline */
   }
 
   /* Adjust input field styles for smaller screens */
