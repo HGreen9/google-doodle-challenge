@@ -1,18 +1,29 @@
 // console.log('OK');
 console.log(gsap);
 
+// Animate the Google letters dropping in
 gsap.from(".Letters", {
   y: -61,
   opacity: 0,
-  delay: 1,
-  duration: 3, 
-  ease: 'elastic'
+  delay: 1, // Start after 1 second
+  duration: 3, // Duration of the animation
+  ease: "elastic" // Elastic easing for a bounce effect
 });
 
 gsap.from(".Vines", {
   opacity: 0, 
   duration: 3, // Fixed typo here
   delay: 3.2
+});
+
+// Animate the vine rope dropping in with a bounce effect, synchronized with the letters
+gsap.from("#vine-rope", {
+  y: -500, // Start 500px above its current position
+  opacity: 0, // Start fully transparent
+  duration: 3, // Match the duration of the letters animation
+  ease: "elastic.out(1, 0.5)", // Elastic easing for a bounce effect
+  delay: 1, // Match the delay of the letters animation
+  onStart: () => console.log("Vine rope animation started"),
 });
 
 window.addEventListener('load', function() {
