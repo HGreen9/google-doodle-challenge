@@ -101,8 +101,7 @@ window.addEventListener('load', function() {
       document.body.style.backgroundColor = "#2c3e50"; // Dark blue for nighttime effect
 
       // Dim other elements
-      const elementsToDim = document.querySelectorAll("svg");
-      elementsToDim.forEach(element => {
+      const elementsToDim = document.querySelectorAll("svg:not(.fireFlies):not(#vine-rope)");      elementsToDim.forEach(element => {
         element.style.transition = "opacity 1s ease";
         element.style.opacity = "0.5"; // Dim elements
       });
@@ -192,6 +191,13 @@ vineRope.addEventListener("click", function () {
     document.body.style.transition = "background-color 1s ease";
     document.body.style.backgroundColor = "#2c3e50"; // Dark blue for nighttime effect
 
+    // Dim other elements except fireflies and vine rope
+    const elementsToDim = document.querySelectorAll("svg:not(.fireFlies):not(#vine-rope):not(.bird):not(.music1):not(.music2):not(.music3)");
+    elementsToDim.forEach(element => {
+      element.style.transition = "opacity 1s ease";
+      element.style.opacity = "0.5"; // Dim elements
+    });
+
     // Show fireflies
     const fireFliesContainer = document.querySelector('.fireFlies');
     fireFliesContainer.style.display = "block"; // Make fireflies visible
@@ -207,6 +213,13 @@ vineRope.addEventListener("click", function () {
     // Change back to daytime
     document.body.style.transition = "background-color 1s ease";
     document.body.style.backgroundColor = "#ffffff"; // White for daytime effect
+
+    // Restore other elements
+    const elementsToRestore = document.querySelectorAll("svg:not(.fireFlies):not(#vine-rope):not(.bird):not(.music1):not(.music2):not(.music3)");
+    elementsToRestore.forEach(element => {
+      element.style.transition = "opacity 1s ease";
+      element.style.opacity = "1"; // Restore elements
+    });
 
     // Hide fireflies
     const fireFliesContainer = document.querySelector('.fireFlies');

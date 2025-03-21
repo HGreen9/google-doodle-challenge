@@ -101,6 +101,8 @@
   animation: sway 4s infinite;
   filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.5)); /* Drop shadow for the vine */
   transform-origin: center top;
+  position: relative; /* Create a stacking context */
+  z-index: 10; /* Higher z-index to ensure it is on top */
 }
 
 #vine-rope:hover {
@@ -116,6 +118,18 @@
   opacity: 1; /* Ensure it is fully visible */
   visibility: visible; /* Ensure it is not hidden */
   transform: none; /* Remove any scaling or transformations */
+}
+
+/* Ensure fireflies are on top */
+.fireFlies {
+  position: relative; /* Create a stacking context */
+  z-index: 10; /* Higher z-index to ensure they are on top */
+  pointer-events: none; /* Prevent interaction with fireflies */
+}
+
+/* Ensure bird and music notes are hidden when display is set to none */
+.bird, .music1, .music2, .music3 {
+  transition: opacity 1s ease; /* Smooth transition for hiding/showing */
 }
 
 /* Global styles to prevent horizontal scrolling */
